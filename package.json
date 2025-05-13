@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "preview:secure": "npm run build:secure && vite preview",
-    "_encrypt": "npx staticrypt dist/index.html -p YourPasswordHere! -d dist/ --short"
+    "_encrypt": "npx staticrypt dist/index.html -p ${npm_config_password:-Fallback123!} -d dist/ --short"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",

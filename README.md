@@ -61,7 +61,7 @@ npm run build:secure
 
 Isso criará uma versão da aplicação onde o arquivo index.html está criptografado e protegido por senha. Os usuários precisarão inserir a senha para acessar a aplicação. Esta funcionalidade é útil para compartilhar a aplicação com um grupo limitado de pessoas sem a necessidade de configurar um sistema completo de autenticação.
 
-Por padrão, a senha é `Conversazione2025!`. Você pode alterá-la modificando o script `_encrypt` no arquivo `package.json`.
+Por padrão, a senha é `Fallback123!`. Você pode alterá-la modificando o script `_encrypt` no arquivo `package.json`, ou executando seu build da seguinte forma: npm run build:secure --password=YourActualPassword
 
 > **Nota**: A proteção por senha é implementada usando o [StaticCrypt](https://github.com/robinmoisson/staticrypt), que criptografa o conteúdo HTML no lado do cliente. Esta não é uma solução de segurança robusta para dados sensíveis, mas é adequada para controlar o acesso casual à aplicação.
 
