@@ -1,0 +1,89 @@
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a2e;
+  color: #e2e2e2;
+  overflow: hidden;
+}
+
+/* Modified gradient for a more refined look */
+.app-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at top right, rgba(233, 69, 96, 0.05), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(15, 52, 96, 0.07), transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16213e10;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f346080;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e94560;
+}
+
+/* Light blur effect for header and input areas */
+.blur-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Typography enhancements */
+.prose pre {
+  background-color: #0f346020;
+  border-radius: 4px;
+  padding: 0.75rem;
+  overflow-x: auto;
+}
+
+.prose code {
+  background-color: #0f346030;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Animation for dots */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Focus styles that match the design */
+button:focus, input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #e9456030;
+}
